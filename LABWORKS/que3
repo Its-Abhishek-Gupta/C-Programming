@@ -1,0 +1,18 @@
+//WAP to calculate area and circumference of a circle
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    printf("Enter the dimensions of circle\n");
+    float radius,area,circumference;
+
+    printf("Enter the radius of circle:");
+    scanf("%f",&radius);
+    area=3.14*pow(radius,2);
+    circumference=2*3.14*radius;
+
+    printf("Area of circle=%f",area);
+    printf("\nCircumference of circle is=%f",circumference);
+
+    return 0;
+}
