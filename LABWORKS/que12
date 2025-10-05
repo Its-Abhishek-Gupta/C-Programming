@@ -1,0 +1,16 @@
+//WAP to print the sum of all numbers upto a given number.
+#include<stdio.h>
+int main()
+{
+    int number,i,sum;
+    printf("Enter the desired number:");
+    scanf("%d",&number);
+    i=0;
+    sum=0;
+    while (i<=number){
+        sum=sum+i;
+        i=i+1;
+    }
+    printf("Sum of all numbers upto the given number=%d",sum);
+    return 0;
+}
