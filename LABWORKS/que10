@@ -1,0 +1,34 @@
+// WAP that accepts marks of five subjects and finds percentage and prints grades according to the following criteria:
+//Between
+//90-100%--------------Print‘ A’
+//80-90%----------------------------Print ‘ B’
+//60-80%---------------------------Print ‘ C’
+//Below 60%----------------------Print‘ D’
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float PPS,EVS,Maths,Physics,Electrical,Percentage;
+    char Grade;
+    printf("Enter the marks of 5 subjects:\n");
+    scanf("%f%f%f%f%f",&PPS,&EVS,&Maths,&Physics,&Electrical);
+    Percentage=(EVS+PPS+Maths+Physics+Electrical)/5;
+    if (Percentage>=90 && Percentage<100){
+        Grade='A';
+    }
+    else if (Percentage>=80 && Percentage<90){
+        Grade='B';
+    }
+    else if (Percentage>=60 && Percentage<80){
+        Grade='C';
+    }
+    else if (Percentage<60){
+        Grade='D';
+    }
+    else{
+        printf("Invaid percetage");
+    }
+    printf("Grade=%c",Grade);
+    return 0;
+}
