@@ -1,0 +1,31 @@
+//WAP that takes two operands and one operator from the user and perform the operation and prints the result by using Switch statement.
+#include<stdio.h>
+int main()
+{
+    int num1,num2;
+    char operator;
+    printf("Enter the two operands:");
+    scanf("%d%d",&num1,&num2);
+    printf("\nEnter the operator:");
+    scanf("\n%c",&operator);
+    switch(operator){
+        case '+':
+            printf("\nSum=%d",num1+num2);
+            break;
+        case '-':
+            printf("\nSubstraction=%d",num1-num2);
+            break;
+        case '*':
+            printf("\nProduct=%d",num1*num2);
+            break;
+        case '/':
+            printf("\nQuotient=%d",num1/num2);
+            break;
+        case '%':
+            printf("\nRemainder=%d",num1%num2);
+            break;
+        default:
+            printf("\nPlease enter the correct operator");
+    }
+    return 0;
+}
