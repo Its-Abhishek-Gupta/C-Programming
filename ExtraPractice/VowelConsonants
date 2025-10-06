@@ -1,0 +1,22 @@
+//WAP TO FIND WHETHER A CHARACTER IS VOWEL OR CONSONANT
+#include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
+int main()
+{
+    char character;
+    printf("Please enter your desired character:");
+    scanf("%c",&character);
+    if (isalpha(character)==0){
+        printf("\nEnter a valid alphabet");
+        return 0;
+        exit(0);
+    }
+    if (character=='A' || character=='a' || character=='E' || character=='e' || character=='I' || character=='i' || character=='O' || character=='o' || character=='U' || character=='u'){
+        printf("\nCharater is a vowel");
+    }
+    else{
+        printf("\nCharacter is a consonant");
+    }
+    return 0;
+}
