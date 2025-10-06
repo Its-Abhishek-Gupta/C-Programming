@@ -1,0 +1,21 @@
+// WAP to find the factorial of a given number.
+#include<stdio.h>
+int main()
+{
+    int number,i,factorial;
+    printf("Enter the number to find the factorial:");
+    scanf("%d",&number);
+    i=1;
+    factorial=1;
+    if (number<=0){
+        printf("\nPlease enter number greater than 0");
+    }
+    else{
+        while (i<=number){
+            factorial=factorial*i;
+            i=i+1;
+        }
+        printf("Factorial of the given number is=%d",factorial);
+    }
+    return 0;
+}
