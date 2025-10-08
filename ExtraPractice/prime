@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int number,i,out;
+    printf("Enter the number to find whether a number is prime or not:");
+    scanf("%d",&number);
+    for (i=2;i<number;i=i+1){
+        if (number%i!=0){
+            out=1;
+        }
+        else{
+            out=0;
+            break;
+        }
+    }
+    if (out==1){
+        printf("\nNumber is prime");
+    }
+    else{
+        printf("Number is not prime");
+    }
+    return 0;
+}
