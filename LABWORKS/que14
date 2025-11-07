@@ -1,0 +1,20 @@
+// WAP to print sum of even and odd numbers from 1 to N numbers
+#include<stdio.h>
+int main()
+{
+    int N,i,Se=0,So=0;
+    printf("Enter the top limit of the list of numbers:");
+    scanf("%d",&N);
+    for (i=0;i<=N;i++)
+    {
+        if (i%2==0){
+            Se=Se+i;
+        }
+        else{
+            So=So+i;
+        }
+    }
+    printf("\nSum of even numbers from 1 to N is %d",Se);
+    printf("\nSum of odd numbers from 1 to N is %d",So);
+    return 0;
+}
