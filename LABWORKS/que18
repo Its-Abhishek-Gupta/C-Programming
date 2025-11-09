@@ -1,0 +1,17 @@
+// WAP to find the reverse of a number.
+#include<stdio.h>
+int main()
+{
+    int n,n1,r,rev=0;
+    printf("Enter the number to find the reverse:");
+    scanf("%d",&n);
+    n1=n;
+    while (n>0){
+        r=n%10;
+        rev=rev*10+r;
+        n=n/10;
+    }
+    printf("\nInitial number is %d",n1);
+    printf("\nThe reversed number is:%d",rev);
+    return 0;
+}
