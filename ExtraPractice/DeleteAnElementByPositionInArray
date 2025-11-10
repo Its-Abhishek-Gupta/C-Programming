@@ -1,0 +1,22 @@
+{
+    int a[20],i,n,pos,loc;
+    printf("Enter the size of the array:");
+    scanf("%d",&n);
+    printf("Enter the elements of the array:");
+    for (i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("Enter the position of element to remove:");
+    scanf("%d",&pos);
+    loc=pos-1;
+    if (loc>=n)
+        printf("\nDeletion not possible:");
+    else{
+        for (i=loc;i<n-1;i++)
+            a[i]=a[i+1];
+        n=n-1;
+        printf("The new array is:");
+        for (i=0;i<n;i++)
+            printf("\na[%d]=\t%d",i,a[i]);
+    }
+    return 0;
+}
