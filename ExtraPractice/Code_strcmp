@@ -9,16 +9,11 @@ int main()
     scanf("%s",b);
     while (a[j]!=0 && b[j]!=0){
         if (a[j]!=b[j]){
-            i=(int) a[j]-b[j];
-            printf("i=%d",i);
+            i=0;
             break;}
         else
-            i=0;
+            i=1;
         j++;
     }
-    if (i==0)
-        printf("\nStrings are equal:");
-    else
-        printf("\nStrings not equal");
-    return 0;
+    printf("%d",i);
 }
