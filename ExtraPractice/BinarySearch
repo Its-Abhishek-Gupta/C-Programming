@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int a[100],i,n,l,u,m,se;
+    printf("enter the size of the array:");
+    scanf("%d",&n);
+    printf("\nEnter the elements of the array:");
+    for (i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("Enter the element to be searched:");
+    scanf("%d",&se);
+    l=0;u=n-1;m=(l+u)/2;
+    while (l<=u && a[m]!=se)
+    {
+        if (se<a[m])
+            u=m-1;
+        else
+            l=m+1;
+        m=(l+u)/2;
+    }
+    if (se==a[m])
+        printf("The element is prresent at the position %d",m+1);
+    else
+        printf("The element is not present in the array");
+    return 0;
+}
