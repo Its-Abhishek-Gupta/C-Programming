@@ -1,0 +1,28 @@
+//Write a program in C to find transpose of matrices. [AKTU 2021-22] 
+#include<stdio.h>
+int main()
+{
+    int a[10][10],b[10][10];
+    int i,j,r,c;
+    printf("Enter the dimensions of the array:");
+    scanf("%d%d",&r,&c);
+    printf("Enter the matrix a:");
+    for (i=0;i<r;i++)
+    {
+        for (j=0;j<c;j++)
+            scanf("%d",&a[i][j]);
+    }
+    for (i=0;i<r;i++)
+    {
+        for (j=0;j<c;j++)
+            b[j][i]=a[i][j];
+    }
+    printf("The transposed matrix is:\n");
+    for (i=0;i<c;i++)
+    {
+        for (j=0;j<r;j++)
+            printf("%d\t",b[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
