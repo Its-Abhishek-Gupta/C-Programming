@@ -1,0 +1,49 @@
+//WAP to add and multiply two matrices of order nxn.
+#include<stdio.h>
+int main()
+{
+    int a[10][10],b[10][10],c[10][10],i,j,k,n;
+    printf("Enter the dimensions of the array:");
+    scanf("%d",&n);
+    printf("\nEnter the matrix a:");
+    for (i=0;i<n;i++)
+    {
+        for (j=0;j<n;j++)
+            scanf("%d",&a[i][j]);
+    }
+    printf("\nEnter the matrix b:");
+    for (i=0;i<n;i++)
+    {
+        for (j=0;j<n;j++)
+            scanf("%d",&b[i][j]);
+    }
+    for (i=0;i<n;i++)
+    {
+        for (j=0;j<n;j++)
+            c[i][j]=a[i][j]+b[i][j];
+    }
+    printf("\nThe added matrix is:\n");
+    for (i=0;i<n;i++)
+    {
+        for (j=0;j<n;j++)
+            printf("%d\t",c[i][j]);
+        printf("\n");
+    }
+    for (i=0;i<n;i++)
+    {
+        for (j=0;j<n;j++)
+        {
+            c[i][j]=0;
+            for (k=0;k<n;k++)
+                c[i][j]+=a[i][k]*b[k][j];
+        }
+    }
+    printf("\nThe multiplied matrix is:\n");
+    for (i=0;i<n;i++)
+    {
+        for (j=0;j<n;j++)
+            printf("%d\t",c[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
