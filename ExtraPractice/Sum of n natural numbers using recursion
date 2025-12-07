@@ -1,0 +1,16 @@
+#include<stdio.h>
+int SumNatural(int n);
+int main()
+{
+    int n,s;
+    printf("Enter the number of natural numbers:");
+    scanf("%d",&n);
+    s=SumNatural(n);
+    printf("Sum of %d natural numbers is %d",n,s);
+    return 0;
+}
+int SumNatural(int x){
+    if (x==0)
+        return 0;
+    return (x+SumNatural(x-1));
+}
