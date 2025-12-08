@@ -1,0 +1,24 @@
+//Finding armstrong number 
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,n1,n2,d=0,r,arm=0;
+    printf("Enter the number :");
+    scanf("%d",&n);
+    n1=n2=n;
+    while (n>0){
+        n=n/10;
+        d++;
+    }
+    while(n1>0){
+        r=n1%10;
+        arm+=pow(r,d);
+        n1=n1/10;
+    }
+    if (arm==n2)
+        printf("Armstrong Number");
+    else
+        printf("Not a armstrong number");
+    return 0;
+}
