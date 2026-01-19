@@ -1,0 +1,23 @@
+//CONVERSION OF BINARY TO DECIMAL
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int bin,dec=0,i,r,bin1,c=0;
+    printf("Enter the binary number:");
+    scanf("%d",&bin);
+    bin1=bin;
+    while(bin1>0){
+        c++;
+        bin1/=10;
+    }
+    bin1=bin;
+    for (i=0;i<c;i++){
+        r=bin1%10;
+        if (r==1)
+            dec+=pow(2,i);
+        bin1/=10;
+    }
+    printf("The decimal form of %d is %d",bin,dec);
+    return 0;
+}
